@@ -2,20 +2,15 @@
  * ------------------------------------------------------------
  * IMPORTANT: The contents of this file are auto-generated.
  *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
+ * Ticker is rendered from layout/theme.liquid via snippet ms8-store-ticker
+ * so it always appears on live. Do not re-add ms8-header-ticker here or
+ * you will get a duplicate strip.
  * ------------------------------------------------------------
  */
 {
   "type": "header",
   "name": "Header",
   "sections": {
-    "ms8_header_ticker": {
-      "type": "ms8-header-ticker",
-      "name": "Scrolling store ticker",
-      "settings": {}
-    },
     "header_section": {
       "type": "header",
       "blocks": {
@@ -78,7 +73,6 @@
     }
   },
   "order": [
-    "ms8_header_ticker",
     "header_section"
   ]
 }

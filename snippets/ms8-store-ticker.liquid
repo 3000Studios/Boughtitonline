@@ -1,0 +1,110 @@
+{% comment %}
+  Guaranteed scrolling store ticker.
+  Rendered from layout/theme.liquid so it cannot be removed by header-group config drift.
+{% endcomment %}
+{% liquid
+  assign ticker_collection = collections['best-sellers'] | default: collections['best-picks'] | default: collections.all
+  assign shown_count = 0
+%}
+
+<style>
+  .ms8-store-ticker {
+    overflow: hidden;
+    width: 100%;
+    border-bottom: 1px solid rgba(20, 33, 27, 0.14);
+    background: rgba(239, 241, 234, 0.98);
+    color: #14211b;
+    position: relative;
+    z-index: 30;
+  }
+  .ms8-store-ticker__track {
+    display: flex;
+    width: max-content;
+    min-width: 100%;
+    will-change: transform;
+    animation: ms8-store-ticker-scroll 40s linear infinite;
+  }
+  .ms8-store-ticker:hover .ms8-store-ticker__track,
+  .ms8-store-ticker:focus-within .ms8-store-ticker__track {
+    animation-play-state: paused;
+  }
+  .ms8-store-ticker__group {
+    display: flex;
+    align-items: center;
+    flex: none;
+  }
+  .ms8-store-ticker__label,
+  .ms8-store-ticker a {
+    display: inline-flex;
+    min-height: 40px;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 18px;
+    border-right: 1px solid rgba(20, 33, 27, 0.14);
+    color: inherit;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.035em;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .ms8-store-ticker__label {
+    background: #14211b;
+    color: #fff;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .ms8-store-ticker a:hover,
+  .ms8-store-ticker a:focus-visible {
+    background: #fff;
+    color: #14211b;
+  }
+  .ms8-store-ticker small {
+    color: #e85d2a;
+    font-size: inherit;
+    font-weight: 800;
+  }
+  @keyframes ms8-store-ticker-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  @media (max-width: 749px) {
+    .ms8-store-ticker__track { animation-duration: 48s; }
+    .ms8-store-ticker__label,
+    .ms8-store-ticker a { min-height: 36px; padding: 6px 14px; font-size: 0.72rem; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .ms8-store-ticker__track {
+      animation: none;
+      width: 100%;
+      overflow-x: auto;
+    }
+  }
+</style>
+
+<aside class="ms8-store-ticker" aria-label="Store highlights and best sellers">
+  <div class="ms8-store-ticker__track">
+    {% for repeat in (1..2) %}
+      <div class="ms8-store-ticker__group" {% if repeat == 2 %}aria-hidden="true"{% endif %}>
+        <span class="ms8-store-ticker__label">Bought It Online</span>
+        <a href="{{ routes.all_products_collection_url }}"><span>Useful finds · Fair prices · No nonsense</span></a>
+        <a href="/collections/deals-under-25"><span>Deals under $25</span></a>
+        <a href="/collections/new-arrivals"><span>New arrivals</span></a>
+        <a href="/collections/best-sellers"><span>Best sellers</span></a>
+        <a href="/collections/gift-ideas"><span>Gift ideas</span></a>
+        <a href="/pages/secure-checkout"><span>Secure Shopify checkout</span></a>
+        <a href="/pages/shipping-information"><span>Fast shipping</span></a>
+        {% assign shown_count = 0 %}
+        {% for product in ticker_collection.products limit: 12 %}
+          {% if product.available and shown_count < 6 %}
+            {% assign shown_count = shown_count | plus: 1 %}
+            <a href="{{ product.url }}">
+              <span>{{ product.title | truncate: 40 }}</span>
+              <small>{{ product.price | money_without_trailing_zeros }}</small>
+            </a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </div>
+</aside>
