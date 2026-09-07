@@ -1,0 +1,14 @@
+User-agent: *
+Disallow: /admin
+Disallow: /cart
+Disallow: /orders
+Disallow: /checkout
+Disallow: /checkouts/
+Disallow: /*?*oseid=*
+Disallow: /*preview_theme_id*
+Disallow: /*preview_script_id*
+
+User-agent: Mediapartners-Google
+Allow: /
+
+Sitemap: https://boughtitonline.com/sitemap.xml
