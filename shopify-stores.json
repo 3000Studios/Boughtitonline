@@ -27,6 +27,37 @@
         "orders": "read",
         "customers": "read"
       }
+    },
+    {
+      "id": "todays-deals-lab",
+      "label": "Todays Deals Lab",
+      "primary": false,
+      "domain": "todays-deals-lab.myshopify.com",
+      "publicDomain": null,
+      "kind": "dev-store",
+      "organization": "231411344",
+      "planPreview": "Grow",
+      "liveThemeId": "141839302718",
+      "notes": "Created 2026-08-18 from Dev Dashboard. Sandbox for TD Flash / Gumroad drops. BoughtItOnline remains the production shop (currently 402 frozen)."
+    },
+    {
+      "id": "my-store-10",
+      "label": "My Store 10 (active trial)",
+      "primary": false,
+      "domain": "hwxcqd-bq.myshopify.com",
+      "publicDomain": "boughtitonline.com",
+      "kind": "trial-merchant",
+      "liveThemeId": "188058730815",
+      "liveThemeName": "Horizon",
+      "env": {
+        "shop": "TD_SHOP_DOMAIN",
+        "adminToken": "TD_SHOPIFY_ADMIN_ACCESS_TOKEN",
+        "clientId": "TD_SHOPIFY_CLIENT_ID",
+        "clientSecret": "TD_SHOPIFY_CLIENT_SECRET",
+        "apiVersion": "TD_SHOPIFY_API_VERSION",
+        "themeId": "TD_THEME_ID"
+      },
+      "notes": "TODAYS DEALS. Advanced plan $1/mo until 2026-11-16. Password off. Horizon 188058730815. Operator app: TD Store Operator (Dev Dashboard 412227731457). Card 2.5%+$0.30."
     }
   ],
   "notes": [

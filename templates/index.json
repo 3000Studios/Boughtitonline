@@ -220,9 +220,26 @@
         "padding-block-start": 0,
         "padding-block-end": 0
       }
+    },
+    "td_flash": {
+      "type": "td-flash",
+      "name": "TD Flash Deal Bar",
+      "settings": {
+        "kicker": "TODAY ONLY",
+        "message": "Member pricing is live. Don’t wait.",
+        "cta_label": "Shop the drop",
+        "cta_url": "/collections/deals-under-25",
+        "ends_at": "2026-08-25T23:59:00-04:00",
+        "dismissible": true,
+        "bg": "#0a0a0a",
+        "fg": "#f4f1ea",
+        "accent": "#f5c400",
+        "font_stack": "Inter, ui-sans-serif, system-ui, sans-serif"
+      }
     }
   },
   "order": [
+    "td_flash",
     "custom_liquid_bought_it_online_hero",
     "ms8_sales_feature",
     "custom_liquid_store_links_ms8",
