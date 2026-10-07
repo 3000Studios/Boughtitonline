@@ -1,0 +1,6 @@
+extends: theme-check:recommended
+# Shopify/theme-tools#1144 treats hosted app blocks as local theme blocks.
+# scripts/check-product-references.py checks every reference in this template.
+JSONMissingBlock:
+  ignore:
+    - templates/product.json
