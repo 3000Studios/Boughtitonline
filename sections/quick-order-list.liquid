@@ -11,6 +11,9 @@
   fetchpriority="low"
 ></script>
 
+{% render 'text-component-shimmer-styles' %}
+{% render 'price-styles' %}
+
 {% liquid
   if section.settings.background_color != blank
     render 'contrast-override', background_color: section.settings.background_color, section_id: section.id
@@ -180,7 +183,9 @@
                           {{ variant_display_name }}
                         </span>
                         {% if section.settings.show_sku %}
-                          <span class="variant-item__sku hidden--mobile">{{ variant.sku }}</span>
+                          <span class="variant-item__sku hidden--mobile"
+                            ><bdi>{{ variant.sku }}</bdi></span
+                          >
                         {% endif %}
 
                         <div class="variant-item__mobile-info hidden--desktop">
@@ -189,7 +194,9 @@
                               {{ variant_display_name }}
                             </span>
                             {% if section.settings.show_sku %}
-                              <span class="variant-item__sku">{{ variant.sku }}</span>
+                              <span class="variant-item__sku"
+                                ><bdi>{{ variant.sku }}</bdi></span
+                              >
                             {% endif %}
                           </div>
                           <div class="variant-item__mobile-price-container">

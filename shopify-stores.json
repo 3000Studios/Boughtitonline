@@ -1,23 +1,25 @@
 {
   "version": 1,
-  "workspaceEnv": "C:/Users/MrJws/OneDrive/Workspaces/global.env",
+  "workspaceEnv": null,
   "githubRepo": "3000Studios/Boughtitonline",
   "canonicalLocalPath": "C:/Users/MrJws/OneDrive/Workspaces/boughtitonline.com",
   "stores": [
     {
       "id": "boughtitonline",
-      "label": "BoughtItOnline",
+      "label": "3000 Studios",
       "primary": true,
-      "domain": "knkxfs-xd.myshopify.com",
+      "domain": "ath0bu-tg.myshopify.com",
       "publicDomain": "boughtitonline.com",
-      "liveThemeId": "181944025389",
+      "liveThemeId": "188515188815",
       "liveThemeName": "Horizon",
       "env": {
-        "shop": "SHOPIFY_SHOP_DOMAIN",
+        "shop": "SHOPIFY_SHOP",
         "adminToken": "SHOPIFY_ADMIN_ACCESS_TOKEN",
         "themeToken": "SHOPIFY_CLI_THEME_TOKEN",
         "apiVersion": "SHOPIFY_API_VERSION",
-        "themeId": "SHOPIFY_THEME_ID"
+        "themeId": "SHOPIFY_THEME_ID",
+        "clientId": "SHOPIFY_CLIENT_ID",
+        "clientSecret": "SHOPIFY_CLIENT_SECRET"
       },
       "capabilities": {
         "theme": true,
@@ -26,7 +28,17 @@
         "pages": true,
         "orders": "read",
         "customers": "read"
-      }
+      },
+      "productionBranch": "main",
+      "provider": "Shopify",
+      "framework": "Horizon Liquid",
+      "health": "live storefront verified 2026-10-07",
+      "adsenseStatus": "not applicable",
+      "monetization": [
+        "digital music",
+        "merchandise",
+        "custom music services"
+      ]
     },
     {
       "id": "todays-deals-lab",
@@ -45,7 +57,7 @@
       "label": "My Store 10 (active trial)",
       "primary": false,
       "domain": "hwxcqd-bq.myshopify.com",
-      "publicDomain": "boughtitonline.com",
+      "publicDomain": null,
       "kind": "trial-merchant",
       "liveThemeId": "188058730815",
       "liveThemeName": "Horizon",
@@ -57,11 +69,11 @@
         "apiVersion": "TD_SHOPIFY_API_VERSION",
         "themeId": "TD_THEME_ID"
       },
-      "notes": "TODAYS DEALS. Advanced plan $1/mo until 2026-11-16. Password off. Horizon 188058730815. Operator app: TD Store Operator (Dev Dashboard 412227731457). Card 2.5%+$0.30."
+      "notes": "Historical store record. Not the canonical production target."
     }
   ],
   "notes": [
-    "Add more Shopify shops as sibling objects under stores[] with their own env key names if needed.",
-    "Cloudflare sites are managed via the workspace PROJECT_REGISTRY.md + Cloudflare MCP, not this file."
+    "boughtitonline.com has one canonical store: ath0bu-tg.myshopify.com. Historical stores are not deployment targets.",
+    "Credentials stay in the owner-controlled private local configuration. Never copy them into this repository."
   ]
 }

@@ -1,15 +1,6 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "type": "footer",
-  "name": "Footer",
+  "name": "t:names.footer",
   "sections": {
     "footer_m9NzUG": {
       "type": "footer",
@@ -32,17 +23,21 @@
             "height": "fit",
             "custom_height": 100,
             "background_media": "none",
+            "background_color": "#191919",
             "video_position": "cover",
             "background_image_position": "cover",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
             "toggle_overlay": false,
             "overlay_color": "#00000026",
             "overlay_style": "solid",
             "gradient_direction": "to top",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_color": "",
+            "border_radius": 0,
+            "link": "",
             "open_in_new_tab": false,
+            "placeholder": "",
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
@@ -52,7 +47,7 @@
             "text_LWt8Pz": {
               "type": "text",
               "settings": {
-                "text": "<h2>Useful finds, cleaner shopping</h2>",
+                "text": "<h2>3000 STUDIOS</h2>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
@@ -63,6 +58,7 @@
                 "letter_spacing": "normal",
                 "case": "none",
                 "wrap": "pretty",
+                "text_color": "#f2f2f2",
                 "background": false,
                 "background_color": "#00000026",
                 "corner_radius": 0,
@@ -76,7 +72,7 @@
             "text_f9CFLH": {
               "type": "text",
               "settings": {
-                "text": "<p>Browse practical home, tech, outdoor, and daily-use essentials. Questions before ordering? Use the contact page and we will help.</p>",
+                "text": "<p>First order? Use WELCOME10 for 10% off. Subscribe for new music and studio drops. Unsubscribe anytime.</p>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
@@ -87,6 +83,7 @@
                 "letter_spacing": "normal",
                 "case": "none",
                 "wrap": "pretty",
+                "text_color": "#d0d0d0",
                 "background": false,
                 "background_color": "#00000026",
                 "corner_radius": 0,
@@ -108,18 +105,24 @@
           "settings": {
             "width": "fill",
             "custom_width": 100,
+            "heading": "Stay in the studio loop",
+            "heading_text_color": "",
             "heading_preset": "h3",
             "border_style": "all",
             "input_style": "custom",
             "border_width": 1,
-            "border_radius": 100,
+            "border_radius": 12,
             "input_background_color": "{{ settings.color_palette.background }}",
             "input_text_color": "{{ settings.color_palette.color1 }}",
             "input_border_color": "{{ settings.color_palette.color2 }}",
             "input_type_preset": "paragraph",
             "style_class": "button-unstyled",
-            "display_type": "arrow",
-            "label": "Sign up",
+            "custom_button_background": "{{ settings.color_palette.foreground }}",
+            "custom_button_text": "{{ settings.color_palette.background }}",
+            "custom_button_border": "{{ settings.color_palette.background }}",
+            "link_text_color": "",
+            "display_type": "text",
+            "label": "Subscribe",
             "integrated_button": true,
             "button_type_preset": "paragraph",
             "padding-block-start": 0,
@@ -128,109 +131,19 @@
             "padding-inline-end": 0
           },
           "blocks": {}
-        },
-        "group_customer_care_ms8": {
-          "type": "group",
-          "settings": {
-            "content_direction": "column",
-            "vertical_on_mobile": true,
-            "horizontal_alignment": "flex-start",
-            "vertical_alignment": "center",
-            "align_baseline": false,
-            "horizontal_alignment_flex_direction_column": "flex-start",
-            "vertical_alignment_flex_direction_column": "center",
-            "gap": 8,
-            "width": "fill",
-            "custom_width": 100,
-            "width_mobile": "fill",
-            "custom_width_mobile": 100,
-            "height": "fit",
-            "custom_height": 100,
-            "background_media": "none",
-            "video_position": "cover",
-            "background_image_position": "cover",
-            "border": "none",
-            "border_width": 1,
-            "border_opacity": 100,
-            "border_radius": 0,
-            "toggle_overlay": false,
-            "overlay_color": "#00000026",
-            "overlay_style": "solid",
-            "gradient_direction": "to top",
-            "open_in_new_tab": false,
-            "padding-block-start": 0,
-            "padding-block-end": 0,
-            "padding-inline-start": 0,
-            "padding-inline-end": 0
-          },
-          "blocks": {
-            "text_customer_care_title_ms8": {
-              "type": "text",
-              "settings": {
-                "text": "<h3>Customer care</h3>",
-                "width": "100%",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "h5",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
-            "text_customer_care_links_ms8": {
-              "type": "text",
-              "settings": {
-                "text": "<p><a href=\"/pages/contact\">Contact support</a><br><a href=\"/pages/shipping-information\">Shipping information</a><br><a href=\"/pages/returns-order-help\">Returns & order help</a><br><a href=\"/pages/faq\">FAQ</a><br><a href=\"/pages/gift-ideas\">Gift ideas</a><br><a href=\"/pages/product-screening-standards\">Product standards</a><br><a href=\"/collections/all\">Shop all products</a></p>",
-                "width": "100%",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "rte",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "text_customer_care_title_ms8",
-            "text_customer_care_links_ms8"
-          ]
         }
       },
       "block_order": [
         "group_H6VpwJ",
-        "email_signup_crihX7",
-        "group_customer_care_ms8"
+        "email_signup_crihX7"
       ],
       "name": "t:names.footer",
       "settings": {
         "section_width": "page-width",
         "gap": 20,
-        "background_color": "{{ settings.color_palette.background }}",
-        "padding-block-start": 30,
-        "padding-block-end": 30
+        "background_color": "#05070A",
+        "padding-block-start": 54,
+        "padding-block-end": 54
       }
     },
     "footer_utilities_jLGE8U": {
@@ -240,6 +153,7 @@
           "type": "footer-copyright",
           "settings": {
             "show_powered_by": true,
+            "text_color": "",
             "font_size": "0.75rem",
             "case": "none"
           },
@@ -248,6 +162,7 @@
         "footer_policy_list_VCdnpa": {
           "type": "footer-policy-list",
           "settings": {
+            "text_color": "",
             "font_size": "0.75rem",
             "case": "none"
           },
@@ -256,26 +171,36 @@
         "social_links_Ew63Kq": {
           "type": "social-links",
           "settings": {
+            "icon_color": "",
             "facebook_url": "",
             "instagram_url": "",
             "youtube_url": "",
             "tiktok_url": "",
-            "twitter_url": ""
+            "twitter_url": "",
+            "threads_url": "",
+            "linkedin_url": "",
+            "bluesky_url": "",
+            "snapchat_url": "",
+            "pinterest_url": "",
+            "tumblr_url": "",
+            "vimeo_url": "",
+            "custom_url": ""
           },
           "blocks": {}
         }
       },
       "block_order": [
         "footer_copyright_jweRK8",
-        "footer_policy_list_VCdnpa"
+        "footer_policy_list_VCdnpa",
+        "social_links_Ew63Kq"
       ],
       "name": "t:names.utilities",
       "settings": {
         "section_width": "page-width",
         "gap": 24,
+        "background_color": "#101010",
         "divider_thickness": 1,
-        "divider_color": "{{ settings.color_palette.color2 }}",
-        "background_color": "{{ settings.color_palette.background }}",
+        "divider_color": "#555555",
         "padding-block-start": 20,
         "padding-block-end": 48
       }
