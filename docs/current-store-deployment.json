@@ -4,13 +4,13 @@
   "domain": "boughtitonline.com",
   "files": {
     "templates/index.json": {
-      "beforeSha256": "3e3914c96451a7c35ccb49e71fdd8e30c8d9a8b415558792eb2f470c380c451a"
+      "beforeSha256": "766ec88228dda7354bfa4be8498314f8ed32487e890a3ea55bfb82bb045d2082"
     },
     "sections/header-group.json": {
-      "beforeSha256": "38fa3d2a92641f87614bfa28ff47dae4e4d0cb618400347fe19bd82f65ff6523"
+      "beforeSha256": "05ff781d41c0da0e5e330078e6c9cefb27c240bf23aaeb96c1a56d70cf29221a"
     },
     "sections/footer-group.json": {
-      "beforeSha256": "5421d589d4d5fd3fd4391313337bb077af21afa7343a3ca2637ae95b48b2ee24"
+      "beforeSha256": "6b3debec6014e274f772fc749d6af43a91f962e82f4c6c5d10bda4545bdb2519"
     }
   }
 }

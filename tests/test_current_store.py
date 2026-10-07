@@ -2,6 +2,8 @@ import importlib.util
 import json
 from pathlib import Path
 import sys
+import subprocess
+import tempfile
 import unittest
 from unittest.mock import Mock, patch
 
@@ -55,6 +57,15 @@ class DeploymentGuards(unittest.TestCase):
             with self.assertRaisesRegex(RuntimeError, "changed since snapshot"):
                 ops.main()
         client._send.assert_not_called()
+
+    def test_git_reader_preserves_utf8_text(self):
+        with tempfile.TemporaryDirectory(prefix="shopify-git-text-") as folder:
+            subprocess.run(["git", "init", "--quiet", folder], check=True)
+            fixture = Path(folder) / "unicode.txt"
+            text = "WELCOME10 \u2014 10% off; 5\u201310 business days"
+            fixture.write_text(text, encoding="utf-8")
+            blob = subprocess.check_output(["git", "-C", folder, "hash-object", "-w", str(fixture)], text=True).strip()
+            self.assertEqual(ops.git("-C", folder, "cat-file", "blob", blob), text)
 
     def test_line_endings_have_same_digest(self):
         self.assertEqual(ops.digest("line\r\n"), ops.digest("line\n"))
