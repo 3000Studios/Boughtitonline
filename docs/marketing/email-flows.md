@@ -1,58 +1,19 @@
-﻿# BoughtitOnline Email/SMS Flow Templates
+# 3000 Studios email status — 2026-10-07
 
-Use these in Shopify Email, Klaviyo, Omnisend, or another email/SMS tool. Do not make fake claims, fake scarcity, or fake reviews.
+Shopify Messaging abandoned-checkout email 77867226 is Active, verified in the app after saving. No test message, bulk campaign or SMS was sent.
 
-## Welcome Flow
+Subject: Finish your 3000 Studios checkout
 
-Trigger: customer subscribes.
+Preview: First order? Use WELCOME10 for 10% off. One use per customer.
 
-Email 1, immediate:
-Subject: Welcome to BoughtitOnline
-Goal: explain useful everyday finds, safe checkout, and current best picks.
-CTA: Shop Best Sellers
+Body:
 
-Email 2, 24 hours:
-Subject: Small upgrades that make daily life easier
-Goal: show 3-5 verified products under the profit gate.
-CTA: Browse New Finds
+> Pick up where you left off
+>
+> First order? Enter WELCOME10 at checkout for 10% off. One use per customer.
+>
+> Digital download access is provided after successful payment. Physical delivery follows the item-specific estimate.
 
-Email 3, 72 hours:
-Subject: Still looking? Start here.
-Goal: route by category: Home, Tech, Outdoor.
-CTA: Pick a Category
+The dynamic checkout items and return-to-checkout action are preserved. The owner's existing sender and legal footer are unchanged. WELCOME10 is restricted to the first-order customer segment and once per customer. Actual email conversion is not yet measured.
 
-## Abandoned Cart Flow
-
-Trigger: cart started, no checkout.
-
-Email 1, 1 hour:
-Subject: You left this behind
-CTA: Return to cart
-
-Email 2, 20 hours:
-Subject: Still interested?
-CTA: Finish checkout
-
-Email 3, 48 hours:
-Subject: Last reminder on your cart
-CTA: Complete order
-
-## Post-Purchase Flow
-
-Email 1, immediate:
-Subject: Thanks for your order
-Goal: set expectations for processing/shipping.
-
-Email 2, after fulfillment:
-Subject: Your order is on the way
-Goal: reinforce support contact and tracking.
-
-Email 3, 14 days after delivery:
-Subject: How did we do?
-Goal: request review if allowed by installed reviews app.
-
-## Winback Flow
-
-Trigger: no purchase in 45 days.
-Subject: New useful finds are live
-CTA: Browse Best Sellers
+The welcome message remains Draft. The native storefront newsletter advertises the existing first-order code. Future welcome, post-purchase or winback campaigns require verified products and appropriate audience consent; do not use fake best-seller claims, urgency or review incentives.

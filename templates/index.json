@@ -122,7 +122,7 @@
           "settings": {
             "source": "uploaded",
             "video": "shopify://files/videos/hero-bundle.mp4",
-            "video_autoplay": true,
+            "video_autoplay": false,
             "video_loop": true,
             "alt": "",
             "custom_width": 100,
@@ -778,7 +778,7 @@
       "type": "custom-liquid",
       "name": "Shop with confidence",
       "settings": {
-        "custom_liquid": "<style>.studio-assurance{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;list-style:none;margin:0;padding:0}.studio-assurance li{min-width:0;border:1px solid #574c2b;border-radius:12px;padding:16px;background:#101010}.studio-assurance a,.studio-assurance span{display:flex;align-items:center;min-height:44px;color:#f4df9a;font-size:clamp(.875rem,2vw,1rem);line-height:1.4;text-decoration:none}.studio-assurance a:focus-visible{outline:2px solid #ffdd00;outline-offset:4px}.studio-assurance small{display:block;color:#ddd;font-size:.8125rem;line-height:1.5}@media(min-width:1000px){.studio-assurance{grid-template-columns:repeat(4,minmax(0,1fr))}}@media(max-width:374px){.studio-assurance{grid-template-columns:1fr}}</style><ul class=\"studio-assurance\" aria-label=\"Shopping with 3000 Studios\"><li><span>Secure Checkout</span><small>Payments handled through Shopify.</small></li><li><a href=\"/policies/refund-policy\">Easy 30-Day Returns</a><small>Physical items; digital exceptions apply.</small></li><li><a href=\"/policies/shipping-policy\">US Shipping Options</a><small>See item-specific processing and delivery.</small></li><li><span>Instant Digital Delivery</span><small>Download access after successful payment.</small></li></ul>",
+        "custom_liquid": "<style>.studio-assurance{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;list-style:none;margin:0;padding:0}.studio-assurance li{min-width:0;border:1px solid #574c2b;border-radius:12px;padding:16px;background:#101010}.studio-assurance a,.studio-assurance span{display:flex;align-items:center;min-height:44px;color:#f4df9a;font-size:clamp(.875rem,2vw,1rem);line-height:1.4;text-decoration:none}.studio-assurance a:focus-visible{outline:2px solid #ffdd00;outline-offset:4px}.studio-assurance small{display:block;color:#ddd;font-size:.8125rem;line-height:1.5}@media(min-width:1000px){.studio-assurance{grid-template-columns:repeat(4,minmax(0,1fr))}}@media(max-width:374px){.studio-assurance{grid-template-columns:1fr}}@media(prefers-reduced-motion:reduce){video.hero__media[autoplay]{display:none}}\n</style><ul class=\"studio-assurance\" aria-label=\"Shopping with 3000 Studios\"><li><span>Secure Checkout</span><small>Payments handled through Shopify.</small></li><li><a href=\"/policies/refund-policy\">Easy 30-Day Returns</a><small>Physical items; digital exceptions apply.</small></li><li><a href=\"/policies/shipping-policy\">US Shipping Options</a><small>See item-specific processing and delivery.</small></li><li><span>Instant Digital Delivery</span><small>Download access after successful payment.</small></li></ul>",
         "background_color": "#101010",
         "section_width": "page-width",
         "padding-block-start": 24,

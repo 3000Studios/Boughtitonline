@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "scripts": {
     "theme:pull": "shopify theme pull --store ath0bu-tg.myshopify.com --theme 188515188815 --nodelete",
-    "theme:check": "shopify theme check",
+    "theme:check": "python scripts/check-product-references.py && shopify theme check",
     "theme:dev": "shopify theme dev --store ath0bu-tg.myshopify.com",
     "products:auto:dry-run": "node scripts/auto-product-publisher.mjs --once",
     "products:auto:publish-once": "node scripts/auto-product-publisher.mjs --once --publish",
