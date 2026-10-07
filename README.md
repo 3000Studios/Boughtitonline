@@ -1,57 +1,19 @@
-# BoughtItOnline Shopify Theme
+# 3000 Studios Shopify storefront
 
-Source-of-truth repo for the BoughtItOnline (`knkxfs-xd`) Shopify storefront theme and Admin API ops scripts.
+Canonical source: `3000Studios/Boughtitonline`, production branch `main`.
+Production domain: https://boughtitonline.com
+Shopify store: `ath0bu-tg.myshopify.com`; live Horizon theme: `188515188815`.
 
-## Source Of Truth
+## Local checks
 
-- GitHub (`3000Studios/Boughtitonline`) is the source of truth for theme code, CSS, scripts, docs, and deployment history.
-- Shopify is the source of truth for products, orders, customers, payments, inventory, policies, and the live storefront runtime.
+Install the locked tools with `npm ci`, then run `npm run theme:check`.
+Shopify compiles Liquid and JSON templates in its storefront runtime; there is no separate local production build or application type-check command.
+Run `npm run bridge:status` to verify the existing private MUSE connection without printing credentials.
 
-## AI / Grok Bridge
+## Deployment
 
-Grok and other agents connect through workspace secrets + this repo. See **[docs/ai-shopify-bridge.md](docs/ai-shopify-bridge.md)** and run:
+Commit and push validated changes to `main`. Deploy only the scoped theme files through Shopify; verify the exact file contents and the live custom domain on mobile and desktop. GitHub Actions is disabled. Automatic Shopify GitHub sync has not been verified for this theme.
+`python scripts/current-store.py deploy --files templates/index.json sections/header-group.json sections/footer-group.json` deploys these exact committed files through Shopify, rejects dirty tracked files, verifies the configured store and live theme, checks remote checksums for concurrent edits, and reads each result back.
+The private renewable client lives in the existing MUSE pipeline; set `MUSE_PIPELINE_ROOT` if that local pipeline moves. Credentials remain in its private owner-controlled configuration and never enter Git.
 
-```powershell
-npm run bridge:status
-```
-
-## Production Deployment
-
-- Store: `knkxfs-xd.myshopify.com`
-- Public domain: boughtitonline.com
-- Live theme: `Horizon`
-- Theme ID: `181944025389`
-
-Deploy with Shopify CLI:
-
-```powershell
-npm install
-npm run theme:check
-npm run theme:push:live -- --no-color
-```
-
-Automated sync deploys run through GitHub Actions on pushes to `main`. See [docs/theme-sync-automation.md](docs/theme-sync-automation.md) for the required `SHOPIFY_CLI_THEME_TOKEN` repository secret and rollback notes.
-
-## Local Workflow
-
-Pull current Shopify theme state before editing:
-
-```powershell
-npm run theme:pull
-```
-
-Check theme quality:
-
-```powershell
-npm run theme:check
-```
-
-Push approved changes live:
-
-```powershell
-npm run theme:push -- --no-color
-```
-
-## Product And Media Operations
-
-See [docs/operations.md](docs/operations.md) for bulk import, product safety checks, and zero-cost media scripts.
+See [current-store-migration.md](docs/current-store-migration.md) for the source migration and rollback boundary.

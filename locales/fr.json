@@ -80,6 +80,7 @@
     "active_filters": "Activez des filtres :",
     "product_details": "Détails du produit",
     "show_product_details": "Afficher les détails du produit pour {{ product_name }}",
+    "show_submenu": "Afficher le sous-menu {{ title }}",
     "featured_product": "Produit en vedette",
     "search_suggestions_available": "Rechercher des suggestions disponibles pour « {{ query }} »",
     "price_filter_low": "Prix bas",
@@ -127,6 +128,7 @@
     "show_all_options": "Afficher toutes les options",
     "open": "Ouvrir",
     "back_to": "Retour à {{ title }}",
+    "back_to_main_menu": "Retour au menu principal",
     "zoom_media": "Zoom du support multimédia {{ index }}"
   },
   "content": {
@@ -300,9 +302,9 @@
       "add_to_apple_wallet": "Ajouter à Apple Wallet",
       "qr_image_alt": "Code QR : scannez‑le pour utiliser votre carte‑cadeau",
       "copy_code": "Copier le code de la carte‑cadeau",
-      "expiration_date": "Expire le {{ expires_on }}",
       "copy_code_success": "Le code a bien été copié",
-      "expired": "Expirée"
+      "expired": "Expirée",
+      "expiration_date_html": "Expire le <bdi>{{ expires_on }}</bdi>"
     }
   },
   "placeholders": {

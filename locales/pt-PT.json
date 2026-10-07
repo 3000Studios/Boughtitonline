@@ -84,7 +84,8 @@
     "search_suggestions_available": "Sugestões de pesquisa disponíveis para \"{{ query }}\"",
     "price_filter_low": "Preço baixo",
     "price_filter_high": "Preço elevado",
-    "view_disclosure_information_for_product": "Ver informações de divulgação de {{ product_title }}"
+    "view_disclosure_information_for_product": "Ver informações de divulgação de {{ product_title }}",
+    "show_submenu": "Mostrar submenu de {{ title }}"
   },
   "actions": {
     "add_to_cart": "Adicionar ao carrinho",
@@ -127,7 +128,8 @@
     "show_all_options": "Mostrar todas as opções",
     "open": "Abrir",
     "back_to": "Regressar a {{ title }}",
-    "zoom_media": "Ampliar conteúdo multimédia {{ index }}"
+    "zoom_media": "Ampliar conteúdo multimédia {{ index }}",
+    "back_to_main_menu": "Voltar ao menu principal"
   },
   "content": {
     "reviews": "avaliações",
@@ -300,9 +302,9 @@
       "add_to_apple_wallet": "Adicionar a Apple Wallet",
       "qr_image_alt": "Código QR — digitalizar para resgatar cartão de oferta",
       "copy_code": "Copiar código de cartão-de oferta",
-      "expiration_date": "Expira em {{ expires_on }}",
       "copy_code_success": "Código copiado com sucesso",
-      "expired": "Expirado"
+      "expired": "Expirado",
+      "expiration_date_html": "Expira a <bdi>{{ expires_on }}</bdi>"
     }
   },
   "placeholders": {

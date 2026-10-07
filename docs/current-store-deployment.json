@@ -1,0 +1,16 @@
+{
+  "store": "ath0bu-tg.myshopify.com",
+  "themeId": 188515188815,
+  "domain": "boughtitonline.com",
+  "files": {
+    "templates/index.json": {
+      "beforeSha256": "3e3914c96451a7c35ccb49e71fdd8e30c8d9a8b415558792eb2f470c380c451a"
+    },
+    "sections/header-group.json": {
+      "beforeSha256": "38fa3d2a92641f87614bfa28ff47dae4e4d0cb618400347fe19bd82f65ff6523"
+    },
+    "sections/footer-group.json": {
+      "beforeSha256": "5421d589d4d5fd3fd4391313337bb077af21afa7343a3ca2637ae95b48b2ee24"
+    }
+  }
+}

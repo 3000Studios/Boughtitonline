@@ -77,8 +77,8 @@
   style="
     {%- render 'spacing-style', settings: block_settings -%}
     {%- render 'border-override', settings: block_settings -%}
-    --text-align: {{ block_settings.alignment }};
-    --horizontal-alignment: {{ block_settings.alignment }};
+    --text-align: {{ block_settings.alignment | replace: 'left', 'start' | replace: 'right', 'end' }};
+    --horizontal-alignment: {{ block_settings.alignment | replace: 'left', 'flex-start' | replace: 'right', 'flex-end' }};
     --gap: {{ block_settings.gap }}px;
   "
   {{ block.shopify_attributes }}
@@ -107,21 +107,50 @@
 
 {% stylesheet %}
   .featured-blog-posts-card {
+    width: 100%;
+    position: relative;
+    height: 100%;
     text-align: var(--text-align);
   }
 
   .featured-blog-posts-card__inner {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    z-index: var(--layer-flat);
+    pointer-events: none;
     gap: var(--gap);
   }
 
-  .resource-list--grid .resource-list__item {
-    min-width: 0;
+  .featured-blog-posts-card__link {
+    position: absolute;
+    inset: 0;
+
+    /* allows focus outline to have radius in supported browsers */
+    border-radius: var(--border-radius);
   }
 
   /* Editorial layout */
   .resource-list:not(.hidden--desktop) .blog-post-card--flexible-aspect-ratio {
+    .featured-blog-posts-card__image,
+    .blog-placeholder-svg {
+      aspect-ratio: 99;
+      height: 100%;
+    }
+
+    .featured-blog-posts-card__inner {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
     .featured-blog-posts-card__content {
       --flex-wrap: nowrap;
+
+      flex-shrink: 0;
+      height: auto;
     }
   }
 
@@ -146,6 +175,12 @@
 
   .featured-blog-posts-card__content {
     --flex-wrap: wrap;
+
+    display: flex;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    gap: var(--gap);
   }
 
   .featured-blog-posts-card__content h4 {
@@ -169,15 +204,15 @@
       "options": [
         {
           "value": "left",
-          "label": "t:options.left"
+          "label": "t:options.direction_start"
         },
         {
           "value": "center",
-          "label": "t:options.center"
+          "label": "t:options.direction_center"
         },
         {
           "value": "right",
-          "label": "t:options.right"
+          "label": "t:options.direction_end"
         }
       ],
       "default": "left"

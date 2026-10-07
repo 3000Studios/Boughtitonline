@@ -1,34 +1,7 @@
-# Shopify Theme Sync Automation
+# Shopify theme deployment
 
-This repo deploys the live Shopify storefront theme through Shopify's native GitHub theme integration. GitHub Actions is not used.
+Current target: ath0bu-tg.myshopify.com, Horizon 188515188815, boughtitonline.com, repository 3000Studios/Boughtitonline/main.
 
-## Live Target
+GitHub Actions is disabled. Automatic native Shopify GitHub integration is not verified for this live theme. Commit and push main, then use the guarded scoped Shopify deployment documented in README. Do not push the entire repository to Shopify: retained historical files are not live assets.
 
-- Store: `knkxfs-xd.myshopify.com`
-- Theme: `Horizon`
-- Theme ID: `181944025389`
-- Connection: Shopify Admin → Online Store → Themes → Connect from GitHub → `3000Studios/Boughtitonline` / `main`
-
-## How It Works
-
-After a validated push to `main`, Shopify syncs the connected theme automatically. Shopify also commits theme-editor changes back to the connected branch.
-
-## Manual Deploy
-
-For an owner-approved recovery deploy before the native connection is established, run from the repo root:
-
-```powershell
-npm run theme:check
-npm run theme:push -- --no-color
-```
-
-## Rollback
-
-Use Shopify Admin theme history for a fast rollback, or revert the offending git commit and push `main` again.
-
-## Safety Rules
-
-- Keep GitHub as the source of truth for theme code.
-- Keep Shopify as the source of truth for products, orders, customers, markets, and payments.
-- Do not store Shopify tokens in repo files.
-- Do not bypass Theme Check for production theme deploys.
+Verify deployed contents and the real domain before claiming completion. Revert the scoped commit or restore the preserved original configuration files for rollback.
